@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: harbor.run.haas-206.pez.pivotal.io/pksdemo/pksdemo
-  tag: harbor.haas-495.pez.vmware.com/cicd/pksdemo@sha256:677aeb329672e4303b58295dfa330e809b09b06ec32a99d22f52fe1037895428
+  tag: sha256:75da716e09224c3544589bd6798f3b9c63cc9d8e33346d5258b95e8a7fb1a8f0
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
