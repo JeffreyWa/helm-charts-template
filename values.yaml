@@ -28,7 +28,7 @@ securityContext: {}
 # runAsUser: 1000
 
 service:
-  type: NodePort
+  type: ClusterIP
   port: 8080
 ingress:
   enabled: true
@@ -37,8 +37,13 @@ ingress:
   # kubernetes.io/tls-acme: "true"
   hosts:
     - host: pksdemo.haas-495.pez.vmware.com
-      paths: /
+      paths:
       pathType: Prefix
+        backend:
+          service:
+            name: pksdemo
+            port:
+              number: 8080      
   tls:
     - secretName: pez-wildcard-tls2
       hosts:
