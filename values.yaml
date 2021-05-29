@@ -37,8 +37,8 @@ ingress:
   # kubernetes.io/tls-acme: "true"
   hosts:
     - host: pksdemo.haas-495.pez.vmware.com
-      paths:
-      pathType: Prefix
+      paths: /
+      - pathType: Prefix
         backend:
           service:
             name: pksdemo
