@@ -4,13 +4,8 @@
 
 replicaCount: 1
 image:
-<<<<<<< HEAD
   repository: harbor.haas-495.pez.vmware.com/cicd/pksdemo@sha256
   tag: 0786e75bbd30c90d785b9b5e96eb12858e0852a0414174ce62fa3a4851ccfc1a
-=======
-  repository: harbor.haas-495.pez.vmware.com/cicd/pksdemo@sha256:0786e75bbd30c90d785b9b5e96eb12858e0852a0414174ce62fa3a4851ccfc1a
-  tag: ""
->>>>>>> 1b7325c516286ccca18ba3c174650711c28e4d85
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
