@@ -31,15 +31,14 @@ service:
   type: ClusterIP
   port: 8080
 ingress:
-  enabled: false
+  enabled: true
   annotations:
     kubernetes.io/ingress.class: istio
   # kubernetes.io/tls-acme: "true"
   hosts:
     - host: pksdemo.haas-495.pez.vmware.com
       paths:
-      - pathType: Prefix
-        path: /
+      - path: /
         backend:
           service:
             name: pksdemo
