@@ -38,12 +38,7 @@ ingress:
   hosts:
     - host: pksdemo.haas-495.pez.vmware.com
       paths:
-      - path: /
-        backend:
-          service:
-            name: pksdemo
-            port:
-              number: 8080      
+      - /
   tls:
     - secretName: pez-wildcard-tls2
       hosts:
