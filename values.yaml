@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: harbor.haas-495.pez.vmware.com/cicd/pksdemo@sha256
-  tag: 168a96121b5d1a2e4d266e8d948b3b1220cf63a800bcc6b25923cdf674d5b9a2
+  tag: 1f4a60ca243e1ddbffabbfd6b1d2c2b086df7979e2ce98e99b3e79b25d824ff9
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
@@ -38,7 +38,7 @@ ingress:
   hosts:
     - host: pksdemo.haas-495.pez.vmware.com
       paths:
-      - /
+        - /
   tls:
     - secretName: pez-wildcard-tls2
       hosts:
