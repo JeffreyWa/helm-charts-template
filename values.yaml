@@ -36,13 +36,13 @@ ingress:
     kubernetes.io/ingress.class: istio
   # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: testtbs.haas-495.pez.vmware.com
+    - host: testtbs.app.haas-495.pez.vmware.com
       paths:
         - /
   tls:
-    - secretName: pez-wildcard-tls2
+    - secretName: pez-app-tls
       hosts:
-        - testtbs.haas-495.pez.vmware.com
+        - testtbs.app.haas-495.pez.vmware.com
 resources: {}
 # We usually recommend not to specify default resources and to leave this as a conscious
 # choice for the user. This also increases chances charts run on environments with little
