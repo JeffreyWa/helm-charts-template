@@ -5,7 +5,7 @@
 replicaCount: 1
 image:
   repository: harbor.haas-495.pez.vmware.com/cicd/chatserver@sha256
-  tag: 1f4a60ca243e1ddbffabbfd6b1d2c2b086df7979e2ce98e99b3e79b25d824ff9
+  tag: 0e8b1a59cc3c0c2536e7155236baec941851fad6568991b8f98320394ed19a1e
   pullPolicy: IfNotPresent
 imagePullSecrets: []
 nameOverride: ""
