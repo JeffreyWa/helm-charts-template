@@ -1,10 +1,10 @@
-# Default values for testtbs.
+# Default values for chatserver.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 replicaCount: 1
 image:
-  repository: harbor.haas-495.pez.vmware.com/cicd/testtbs@sha256
+  repository: harbor.haas-495.pez.vmware.com/cicd/chatserver@sha256
   tag: 1f4a60ca243e1ddbffabbfd6b1d2c2b086df7979e2ce98e99b3e79b25d824ff9
   pullPolicy: IfNotPresent
 imagePullSecrets: []
@@ -29,20 +29,20 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8089
+  port: 8080
 ingress:
   enabled: true
   annotations:
     kubernetes.io/ingress.class: istio
   # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: testtbs.app.haas-495.pez.vmware.com
+    - host: chatserver.app.haas-495.pez.vmware.com
       paths:
         - /
   tls:
     - secretName: pez-app-tls
       hosts:
-        - testtbs.app.haas-495.pez.vmware.com
+        - chatserver.app.haas-495.pez.vmware.com
 resources: {}
 # We usually recommend not to specify default resources and to leave this as a conscious
 # choice for the user. This also increases chances charts run on environments with little
