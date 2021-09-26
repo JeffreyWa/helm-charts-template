@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{ include "cicdtemplate.fullname" . }}-test-connection"
+  name: "{{ include "pksdemo.fullname" . }}-test-connection"
   labels:
-{{ include "cicdtemplate.labels" . | indent 4 }}
+{{ include "pksdemo.labels" . | indent 4 }}
   annotations:
     "helm.sh/hook": test-success
 spec:
@@ -11,5 +11,5 @@ spec:
     - name: wget
       image: busybox
       command: ['wget']
-      args:  ['{{ include "cicdtemplate.fullname" . }}:{{ .Values.service.port }}']
+      args:  ['{{ include "pksdemo.fullname" . }}:{{ .Values.service.port }}']
   restartPolicy: Never
